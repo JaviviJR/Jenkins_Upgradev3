@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Clean Workspace') {
-            steps {
-                deleteDir()  // Limpia todo el directorio de trabajo
-            }
-        }
+        // stage('Clean Workspace') {
+        //     steps {
+        //         deleteDir()  // Limpia todo el directorio de trabajo
+        //     }
+        // }
         stage('Build Application') {
             steps {
                 sh 'mvn -f docker-java-tomcat-sample/pom.xml clean package'
